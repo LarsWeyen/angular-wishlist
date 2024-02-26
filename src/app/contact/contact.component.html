@@ -23,7 +23,8 @@
       <small class="text-danger" 
       *ngIf="contactForm.get('senderEmail')?.hasError('email')" >Please enter your email address.</small>
 
-      <!-- <small class="text-danger">The email provider is not allowed.</small> -->
+      <small class="text-danger"
+      *ngIf="contactForm.get('senderEmail')?.hasError('invalidEmailDomain')">The email provider is not allowed.</small>
     </div>
   </div>
 
